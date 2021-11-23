@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import react from 'react';
 import './App.css';
+
+const todoTest = [
+  {text : "ex1", completed: false},
+  {text : "ex2", completed: false},
+  {text : "ex3", completed: false}
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <TodoCounter/>
+      <h3>Se completaron x de y To Do's</h3>
+
+      <TodoSearch/>
+      <input placeholder = "Ingrese to do a buscar"/>
+
+      <TodoList>
+        {todoTest.map(todo =>(
+          <TodoItem/>
+        ))}
+        
+      </TodoList>
+      <CreateTodoButton/>
+      <button></button>
+    </React.Fragment>
+
   );
 }
 
