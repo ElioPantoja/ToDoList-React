@@ -11,8 +11,8 @@ import './App.css';
 const todos = [
   {text : "ex1", completed: false},
   {text : "ex2", completed: false},
-  {text : "ex3", completed: false}
-]
+  {text : "ex3", completed: false},
+];
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
 
       <TodoList>
         {todos.map(todo =>(
-          <TodoItem text ={todo.text}/>
+          <TodoItem key={todo.text} text={todo.text} />
         ))}
       </TodoList>
 
