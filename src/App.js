@@ -9,10 +9,6 @@ import CreateTodoButton from"./CreateTodoButton"
 
 /* Styles - CSS */
 
-
-import './App.css';
-
-
 const todos = [
   {text : "ex1", completed: false},
   {text : "ex2", completed: false},
